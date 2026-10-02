@@ -32,6 +32,9 @@ class Trail:
         self._rows.append(r)
         return r
 
+    def record(self, index: int):
+        return self._rows[index - 1] if 1 <= index <= len(self._rows) else None
+
     def verify(self):
         prev = 'GENESIS'
         for r in self._rows:
